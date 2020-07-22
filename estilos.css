@@ -236,10 +236,6 @@ h1, h2, h3, h4, h5, h6{
     font-weight: bold;
 }
 
-.detallesProyecto p {
-    
-}
-
 .detallesProyecto h3, h4, p { 
     margin: 10px 0;
 }
@@ -339,7 +335,7 @@ h1, h2, h3, h4, h5, h6{
     .header{
         display: block;
         height: auto;
-        padding: 20px;        
+        padding: 10px;        
     }
     .header ul{
         display: flex;
@@ -375,13 +371,38 @@ h1, h2, h3, h4, h5, h6{
 
     .detallesProyecto p {
         font-size: 1.5em;
+        margin-right: 0px
     }
     
 
 }
 
 @media screen and (max-width: 480px) {
+    .header{  
+        height: auto;
+        padding: 10px;        
+    }
+    .logo_jb {    
+        font-family: 'Monoton', cursive;
+        font-size: 30px;  
+    }
+    .header ul  {
+        font-size: 16px;        
+    }
     
+    .header ul li {
+        height: 25px;
+    }
+
+    .proyecto_imageContainer{
+        max-width: 100%;
+        height: auto;
+    }
+
+
+
+
+
 }
 
 
