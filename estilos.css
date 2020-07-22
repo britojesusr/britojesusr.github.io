@@ -310,7 +310,6 @@ h1, h2, h3, h4, h5, h6{
 
 
 .container{
-   /* background-color: #00b3c5; */
     display: inherit;
     flex-wrap: inherit;
     justify-content: inherit;
