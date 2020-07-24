@@ -390,6 +390,7 @@ h1, h2, h3, h4, h5, h6{
     }
 
 
+
 }
 
 @media screen and (max-width: 480px) {
@@ -413,6 +414,31 @@ h1, h2, h3, h4, h5, h6{
         max-width: 100%;
         height: auto;
     }
+        
+
+
+
+    .subtitulos{
+        font-size: 16px;
+    }
+
+    .detallesProyecto h3 {
+        font-size: 16px;
+    }
+
+    .detallesCurso h3{
+        font-size: 16px;
+    }
+    .detallesCurso p, a{
+        font-size: 14px;
+    }
+
+    .section_contacto {
+        width: 100%;
+        padding: 0;
+    }
+
+
 }
 
 
