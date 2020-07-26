@@ -1,10 +1,10 @@
 *{
-    box-sizing: border-box;
-   
+    box-sizing: border-box;   
 }
 body{
     font-family: 'Source Sans Pro', sans-serif;
     margin: 0;
+    padding: 0 20px;
 }
 
 
@@ -12,9 +12,11 @@ body{
     background-color: #393e46;
     color: #eee;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     height: 70px;    
+    padding: 0 20px;
 }
 .menu {
     height: inherit;
@@ -46,24 +48,26 @@ body{
     font-family: 'Monoton', cursive;
     font-size: 40px;  
 }
-.nombre{
-    font-family: 'Monoton', cursive;
-    font-size: 30px;   
-}
+
 
 
 .hero{
-    width: inherit;
+    position: relative;
+    width: 100%;
     height: 250px;
     margin: 0 auto;
     background-color: #393e46;
     display: flex;
     justify-content: space-between;
-    align-items: center;   
+    align-items: center;
 }
 .portada {
-    width: 750px;
-    height: inherit;    
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    bottom: 0;    
 }
 h1{
     width: 500px;
@@ -84,13 +88,12 @@ h1, h2, h3, h4, h5, h6{
 
 
 .conocimientos{
-    width: 1200px;
-    height: 300px;
+    width: auto;
+    height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-
     box-sizing: border-box;    
     margin: 30px auto;
 }
@@ -105,11 +108,11 @@ h1, h2, h3, h4, h5, h6{
     padding: 15px;    
     width: 140px;
     height: 140px;
+    margin: 10px;
 }
 .logo_imageContainer{
     width: 90px;
-    height: 90px;
-    padding: 0;
+    height: 90px;    
     margin: 0;   
 }
 .logo_image{
@@ -132,7 +135,7 @@ h1, h2, h3, h4, h5, h6{
 
  
 .section_cursos{
-    width: 1200px;
+    max-width: 1000px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -148,21 +151,24 @@ h1, h2, h3, h4, h5, h6{
     align-items: center;
     border: 1px solid #393e46;  
     border-radius: 10px;
-    width: 550px;
-    height: 450px;
+    width: 48%;
+    height: auto;
     box-sizing: border-box;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    
+    
 }
 
 .container_cursosImage{
     display: flex;
-    width: 460px;
+    width: 100%;
     height: 260px;
+    padding: 0 30px;
 
     
 }
 .cursosImage{
-    width: 450px;
+    width: 100%;
     height: 250px; 
 }
 
@@ -177,8 +183,8 @@ h1, h2, h3, h4, h5, h6{
 
 
 .portafolio{
-    width: 1200px;
-    height: 1200px;
+    max-width: 1000px;
+    height: auto;
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
@@ -188,53 +194,56 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .proyecto{
-    width: inherit;
-    height: 520px;
-    padding: 30px;
+    width: 1000px;
+    height: auto;
+    padding: 20px;
     border: 1px solid #393e46;
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
-    
- 
-    
+    margin-bottom: 20px;   
 }
+
 .proyecto_imageContainer{
-    width: 550px;
-    height: 450px;
+    width: 50%;
+    height: 470px;
     display: flex;
     margin: 0;
+}
+
+.proyecto_imageContainer img {
+    max-width: 100%;
+    border-radius: 5px;
     
+}
 
 
-}
-.imageProyecto{
-    width: inherit;
-    height: inherit;
-    border: 1px solid #393e46;
-        
-}
+
 
 .detallesProyecto{
-    width: 500px;
-    height: 400px;
+    width: 50%;
+    height: max-content;
     display: flex;
     flex-direction: column;
-    
-           
 }
 .detallesProyecto h3 {
     font-size: 24px;
+    
 }
 .descripcion_proyecto{
     font-size: 18px;
     text-indent: 1em;
+    text-align: justify;
+    margin-right: 20px;
 }
 .fecha{
     color: #96cc4b;
     font-weight: bold;
 }
 
+.detallesProyecto h3, h4, p { 
+    margin: 10px 0;
+}
 
 
 
@@ -314,8 +323,324 @@ h1, h2, h3, h4, h5, h6{
     flex-wrap: inherit;
     justify-content: inherit;
     align-items: inherit;
-    width: 1200px;
+    max-width: 1000px;
+    flex: 1;
     height: inherit;
     margin: 0 auto;
     padding: 0;    
 }
+
+
+/* mediaquerys*/ 
+
+
+@media screen and (max-width: 1024px) {
+
+    .hero {
+        position: relative;
+        height: auto;
+        overflow: hidden;
+        padding: 1em;
+       
+    }
+    h1{
+        font-size: 2em;
+        z-index: 2;
+    }
+    .portada{
+        height: 100%;
+        width: 60%;
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+}
+@media screen and (max-width: 767px) {
+
+    .header{
+        display: block;
+        height: auto;
+        padding: 10px;        
+    }
+    .header ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;        
+    }
+    .header ul li {
+        height: 30px;
+        
+    }
+    .proyecto{
+        display: block;
+        width: auto;
+    }
+    .detallesProyecto{
+        width: auto;
+        font-size: 10px;
+    }
+    .proyecto_imageContainer{
+        width: auto;
+    }    
+    .detallesProyecto h3 {
+        font-size: 1.8em;
+    }
+    .detallesProyecto h4 {
+        font-size: 1.5em;
+    }
+    .detallesProyecto p {
+        font-size: 1.5em;
+        margin-right: 0px
+    }
+
+    .section_cursos{
+        display: block;        
+    }
+
+    .article_cursos {
+        width: auto;
+        height: auto;
+    }
+    .container_cursosImage{
+        width: 70%;
+        height: auto;        
+        padding: 0;
+    }
+    .cursosImage{
+        width: 100%;
+        height: auto;
+    }
+
+
+    .hero {
+        position: relative;
+        height: auto;
+        overflow: hidden;
+        padding: 0.5em;
+       
+    }
+    h1{
+        font-size: 1.5em;
+        z-index: 2;
+    }
+    .portada{
+        height: 100%;
+        width: 60%;
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+    .conocimientos{
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        box-sizing: border-box;    
+        margin: 30px auto;
+    }
+    .conocimientos_container{
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid #393e46;
+        border-radius: 50%;
+        box-sizing: content-box;
+        padding: 15px;    
+        width: 80px;
+        height: 80px;
+    }
+    .logo_imageContainer{
+        width: 60px;
+        height: 60px;
+        padding: 0;
+        margin: 0;   
+    }
+    .logo_image{
+        margin: 0;
+        width: inherit;
+        height: inherit;          
+    }
+    .conocimientos_container:hover .logo_imageContainer{
+        width: 90px;
+        height: 90px;     
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .header{  
+        height: auto;
+        padding: 10px;        
+    }
+    .logo_jb {    
+        font-family: 'Monoton', cursive;
+        font-size: 30px;  
+    }
+    .header ul  {
+        font-size: 16px;        
+    }
+    
+    .header ul li {
+        height: 25px;
+    }
+
+    .proyecto_imageContainer{
+        max-width: 100%;
+        height: auto;
+    }
+        
+
+
+
+    .subtitulos{
+        font-size: 16px;
+    }
+
+    .detallesProyecto h3 {
+        font-size: 16px;
+    }
+
+    .detallesCurso h3{
+        font-size: 16px;
+    }
+    .detallesCurso p, a{
+        font-size: 14px;
+    }
+
+    .section_contacto {
+        width: 100%;
+        padding: 0;
+    }
+
+    .hero {
+        position: relative;
+        height: auto;
+        overflow: hidden;
+        padding: 1em;
+       
+    }
+    h1{
+        font-size: 1.5em;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.7);
+        width: max-content;
+                
+    }
+    .portada{
+        height: 90%;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+    .conocimientos{
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        box-sizing: border-box;    
+        margin: 30px auto;
+    }
+    .conocimientos_container{
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid #393e46;
+        border-radius: 50%;
+        box-sizing: content-box;
+        padding: 10px;    
+        width: 60px;
+        height: 60px;
+    }
+    .logo_imageContainer{
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        margin: 0;   
+    }
+    .logo_image{
+        margin: 0;
+        width: inherit;
+        height: inherit;          
+    }
+    .conocimientos_container:hover .logo_imageContainer{
+        width: 60px;
+        height: 60px;     
+    }
+
+
+
+    .section_contacto {
+    background-color: #00b3c5;
+    color: #FFF;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+      
+}
+  
+.container_selfiejb{
+    display: flex;
+    width: 100px;
+    height: auto;    
+    margin: 0;    
+}
+
+.selfie_jb{
+    width: inherit;
+    height: inherit;   
+}
+
+.redes{
+    display: flex;
+    justify-content: space-around;
+    width: 250px;
+    
+}
+
+.social_link{
+    width: 50px;
+    height: 50px;
+    background-size: 50px 50px;
+    
+    
+}
+.footer{
+    font-size: 14px;
+    height: 40px;
+    background-color: #393e46;
+    color: #eee;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+
+}
+
+.footer a {
+    color: #eee;
+    text-decoration: none;
+    font-weight: bold;    
+}
+}
+
+
+
+
+
+/* mediaquerys*/ 
