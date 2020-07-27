@@ -12,12 +12,12 @@
 
 </head>
 <body>
-    
+    <i class="icon-menu burger-button" id="burger-menu"></i>
     <header class="header">
         <div class="container">
                 <span class="logo_jb">JB</span>
 
-                <nav class="menu">
+                <nav id="navito" class="menu is-active">
                     <ul>
                         <li>
                             <a href="#conocimientos">Conocimientos</a>
@@ -225,6 +225,25 @@
         </div>
         
     </footer>
+
+    <script>
+       
+
+        const menu = document.querySelector('#navito');
+        const burgerButton = document.querySelector('#burger-menu');
+        
+        menu.classList.add('is-active');
+
+        burgerButton.addEventListener('click', hideShow)
+
+        function hideShow() {
+            menu.classList.add('is-active');
+        }
+
+
+    
+    </script>
+
     
 </body>
 </html>
