@@ -1,0 +1,48 @@
+/*  Colores
+     azul   #2c71fa 
+     verde  #009645
+     amarillo #ffc700
+     rojo #de3420
+*/
+
+body {
+    font-family: 'Acme', sans-serif;
+
+}
+
+.container {    
+    text-align: center;
+
+}
+
+h1 {
+    color: #2c71fa;
+    
+}
+
+img {
+    margin-top: 20px;
+}
+
+h1, h2 {
+    animation-duration: 3s;
+    animation-name: cambio_color;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes cambio_color {
+    0% {
+      color: #009645;
+    }
+  
+    25% {
+    color: #2c71fa;
+    }
+  
+    50% {
+    color: #ffc700;
+    }
+    100% {
+        color: #de3420;
+        }
+  }
