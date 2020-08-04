@@ -9,7 +9,7 @@ body {
     font-family: 'Acme', sans-serif;
     display: flex;
     justify-content: center;
-    
+
 
 
 }
@@ -54,4 +54,13 @@ h1, h2 {
     100% {
         color: #de3420;
         }
+  }
+
+  @media screen and (max-width:480px) {
+    img {
+        width: 300px;
+        height: auto;
+        margin-top: 20px;
+    }
+
   }
